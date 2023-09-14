@@ -897,6 +897,9 @@ class StableDiffusionControlNetImg2ImgPipeline(
         if isinstance(controlnet, MultiControlNetModel) and isinstance(controlnet_conditioning_scale, float):
             controlnet_conditioning_scale = [controlnet_conditioning_scale] * len(controlnet.nets)
 
+        if isinstance(controlnet, MultiControlNetModel) and len(controlnet_guidance) == 1:
+            controlnet_guidance = controlnet_guidance * len(controlnet.nets)
+
         global_pool_conditions = (
             controlnet.config.global_pool_conditions
             if isinstance(controlnet, ControlNetModel)
