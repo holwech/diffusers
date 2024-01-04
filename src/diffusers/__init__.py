@@ -255,7 +255,7 @@ else:
             "StableDiffusionControlNetImg2ImgPipeline",
             "StableDiffusionControlNetInpaintPipeline",
             "StableDiffusionControlNetPipeline",
-            "StableDiffusionControlNetCustom",
+            "StableDiffusionControlNetCustomPipeline",
             "StableDiffusionDepth2ImgPipeline",
             "StableDiffusionDiffEditPipeline",
             "StableDiffusionGLIGENPipeline",
